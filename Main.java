@@ -15,8 +15,11 @@ class Main {
         System.out.println("=== Boarding Passengers ===");
         passenger1.boardCar(train.getCar(0));
         passenger2.boardCar(train.getCar(0));
-        passenger3.boardCar(train.getCar(1));
+        passenger3.boardCar(train.getCar(1))
         passenger4.boardCar(train.getCar(1));
+
+        //Test duplicate boarding
+        passenger2.boardCar(train.getCar(0));
 
         System.out.println("\n=== Train Manifest ===");
         train.printManifest();

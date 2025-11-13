@@ -7,25 +7,39 @@ public class Engine implements EngineRequirements {
     private FuelType fuelType;
     private double maxFuel;
     private double currentFuel;
-
-    // accessors and manipulators
-
+    /**
+     * getter for fuel type of the engine.
+     * @return fuel type of the engine
+     */
     public FuelType getFuelType() {
         return this.fuelType;
     }
-
+    /**
+     * getter for maximum fuel capacity of the engine.
+     * @return maximum fuel capacity of the engine
+     */
     public double getMaxFuel() {
         return this.maxFuel;
     }
-
+    /**
+     * setter for maximum fuel capacity of the engine.
+     * @param maxFuel
+     */
     public void setMaxFuel(double maxFuel) {
         this.maxFuel = maxFuel;
     }
-
+    /**
+     * getter for current fuel level of the engine.
+     * @return current fuel level of the engine
+     */
     public double getCurrentFuel() {
         return currentFuel;
     }
 
+    /**
+     * setter for current fuel level of the engine.
+     * @param currentLevel
+     */
     public void setCurrentFuel(double currentLevel) {
         this.currentFuel = currentLevel;
     }
@@ -37,7 +51,7 @@ public class Engine implements EngineRequirements {
      * @param maxFuel     maximum fuel capacity of the engine
      * @param currentFuel current fuel level of the engine
      */
-    public Engine(FuelType fuelType, double maxFuel, double currentFuel) {
+    public Engine(FuelType fuelType,  double currentFuel, double maxFuel) {
         this.maxFuel = maxFuel;
         this.currentFuel = currentFuel;
         this.fuelType = fuelType;

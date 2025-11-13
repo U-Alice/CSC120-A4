@@ -19,12 +19,20 @@ public class Car implements CarRequirements {
         passengers = new ArrayList<>(capacity);
     }
 
-    // accessors and manipulators
 
+    /**
+     * accessor for the maximum passenger capacity of the car.
+     * @return maximum passenger capacity of the car
+     */
     public int getCapacity() {
         return capacity;
     }
 
+    /**
+     * Calculates and returns the number of seats remaining in the car.
+     * 
+     * @return number of seats remaining
+     */
     public int seatsRemaining() {
         return capacity - passengers.size();
     }
@@ -36,7 +44,7 @@ public class Car implements CarRequirements {
      * @return true if the passenger was added successfully, false otherwise.
      */
     public Boolean addPassenger(Passenger p) {
-        if (seatsRemaining() != 0) {
+        if (seatsRemaining() != 0 & !passengers.contains(p)) {
             this.passengers.add(p);
             return true;
         }

@@ -29,7 +29,7 @@ public class Passenger implements PassengerRequirements {
         if (carBoarding) {
             System.out.println("Passenger boarded on car successfully!!");
         } else {
-            System.out.println("Ooops! Boarding not successfuly, car may be full!");
+            System.out.println("Ooops! Boarding not successfull, car may be full or passenger arleady boarded!");
         }
     }
 

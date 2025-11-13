@@ -8,8 +8,7 @@ public class Train implements TrainRequirements {
     // attributes
     private Engine engine;
     private ArrayList<Car> cars;
-    private int seatsRemaining;
-    private int maxCapacity;
+
 
     /**
      * Constructor for Train class
@@ -30,11 +29,19 @@ public class Train implements TrainRequirements {
         }
     }
 
-    // accessors and manipulators
+    /**
+     * accessor for the engine of the train.
+     * @return engine of the train
+     */
     public Engine getEngine() {
         return this.engine;
     }
-
+    /**
+     * accessor for a specific car in the train by its index.
+     * 
+     * @param i index of the car to retrieve
+     * @return Car object at the specified index
+     */
     public Car getCar(int i) {
         return cars.get(i);
     }
@@ -46,10 +53,11 @@ public class Train implements TrainRequirements {
      * @return total maximum passenger capacity of the train
      */
     public int getMaxCapacity() {
+        int maxCapacity = 0;
         for (Car car : cars) {
-            this.maxCapacity += car.getCapacity();
+            maxCapacity += car.getCapacity();
         }
-        return this.maxCapacity;
+        return maxCapacity;
     }
 
     /**
@@ -59,11 +67,11 @@ public class Train implements TrainRequirements {
      * @return total number of seats remaining
      */
     public int seatsRemaining() {
-        this.seatsRemaining = 0;
+        int seatsRemaining = 0;
         for (Car car : cars) {
-            this.seatsRemaining += car.seatsRemaining();
+            seatsRemaining += car.seatsRemaining();
         }
-        return this.seatsRemaining;
+        return seatsRemaining;
     }
 
     /**
